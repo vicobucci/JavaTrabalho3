@@ -26,7 +26,7 @@ public class AutorController {
 
     @GetMapping("/{codigo}")
     public ResponseEntity<Autor> buscarAutorPorCodigo(@PathVariable Integer codigo) {
-        Autor autor = autorService.buscarPorCodigo(codigo);
+        Autor autor = autorService.buscarPorCodigo(Long.valueOf(codigo));
         return ResponseEntity.ok(autor);
     }
 
@@ -40,14 +40,14 @@ public class AutorController {
 
     @PutMapping("/{codigo}")
     public ResponseEntity<Autor> atualizarAutor(@PathVariable Integer codigo, @RequestBody Autor autorDetalhes) {
-        Autor autorAtt = autorService.atualizar(codigo, autorDetalhes);
+        Autor autorAtt = autorService.atualizar(Long.valueOf(codigo), autorDetalhes);
         return ResponseEntity.ok(autorAtt);
     }
 
 
     @DeleteMapping("/{codigo}")
     public ResponseEntity<Void> deletarAutor(@PathVariable Integer codigo) {
-        autorService.delete(codigo);
+        autorService.delete(Long.valueOf(codigo));
         return ResponseEntity.noContent().build();
     }
 }

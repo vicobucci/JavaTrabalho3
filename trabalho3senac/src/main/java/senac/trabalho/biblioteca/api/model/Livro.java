@@ -38,4 +38,51 @@ public class Livro {
     )
     private Set<Autor> autores;
 
+    public Integer getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public Short getAno() {
+        return ano;
+    }
+
+    public void setAno(Short ano) {
+        this.ano = ano;
+    }
+
+    public Lingua getLingua() {
+        return lingua;
+    }
+
+    public void setLingua(Lingua lingua) {
+        this.lingua = lingua;
+    }
+
+    public List<Edicao> getEdicoes() {
+        return edicoes;
+    }
+
+    public void setEdicoes(List<Edicao> edicoes) {
+        this.edicoes = edicoes;
+    }
+
+    public Set<Autor> getAutores() {
+        return autores;
+    }
+
+    public void setAutores(Set<Autor> autores) {
+        this.autores = autores;
+    }
 }
